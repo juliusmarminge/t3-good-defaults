@@ -5,8 +5,9 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "format": "prettier --write '**/*.{ts,tsx,cjs,mjs,json,md,mdx}'",
     "postinstall": "prisma generate",
-    "lint": "next lint",
+    "lint": "eslint . --cache --cache-strategy content --ignore-path .gitignore",
     "start": "next start"
   },
   "dependencies": {
@@ -28,11 +29,14 @@
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.0",
+    "@typescript-eslint/parser": "^5.36.0",
     "autoprefixer": "^10.4.7",
-    "eslint": "^8.26.0",
+    "eslint": "^8.23.0",
     "eslint-config-next": "13.0.2",
+    "eslint-config-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
